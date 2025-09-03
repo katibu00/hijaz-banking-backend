@@ -83,7 +83,7 @@ class AuthController extends Controller
             $otp = Otp::generateOtp($phoneNumber, $type);
             
             // Send SMS
-            $this->smsService->sendOtp($phoneNumber, $otp->otp_code);
+            // $this->smsService->sendOtp($phoneNumber, $otp->otp_code);
 
             return response()->json([
                 'success' => true,
