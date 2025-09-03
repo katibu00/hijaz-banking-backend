@@ -33,7 +33,7 @@ class AuthController extends Controller
     {
         try {
             $validator = Validator::make($request->all(), [
-                'phone_number' => 'required|string|regex:/^(\+234|234|0)[789][0-9]{9}$/',
+                'phone_number' => 'required|string',
                 'type' => 'sometimes|in:registration,login,password_reset'
             ]);
 
